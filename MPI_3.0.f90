@@ -88,13 +88,13 @@
      call mpi_barrier(MPI_COMM_WORLD, mpiErr)!ждем пока все процессы не получат верные значения координат
 
      if (transpos) then  !возвращаем матрицу в изначальный вид, если ранее транспонировали
-		tmp = x1
-		x1 = y1
-		y1 = tmp
+        tmp = x1
+        x1 = y1
+        y1 = tmp
     
-		tmp = y2
-		y2 = x2
-		x2 = tmp
+        tmp = y2
+        y2 = x2
+        x2 = tmp
      endif
 
      if(mpiRank==0) then
